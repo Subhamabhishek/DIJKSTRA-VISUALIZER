@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(127, 130, 157);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #4a5161;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Makes the buttons cylindrical */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a489e3;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 240px); /* Adjusted to account for the header, buttons, and footer */
+    width: 100%;
+    flex-grow: 1;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(50, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 2px;
+}
+
+.node {
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.node.start {
+    background-color: green;
+}
+
+.node.end {
+    background-color: red;
+}
+
+.node.wall {
+    background-color: gray;
+}
+
+.node.visited {
+    background-color: purple;
+}
+
+.node.shortest-path {
+    background: linear-gradient(112.1deg, rgb(237, 238, 242) 11.4%, rgb(63, 76, 119) 70.2%);
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
